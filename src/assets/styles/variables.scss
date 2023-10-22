@@ -1,0 +1,47 @@
+// Colors
+$text-color: #dcdcdc;
+$text-color-secondary: #585858;
+
+$background-color: #0e0e0e;
+$primary-color: #dcdcdc;
+$secondary-color: #f25959;
+
+$accent-color: #f25959;
+
+$first-blob-color: #f25959;
+$second-blob-color: #fdc536;
+$third-blob-color: #9361ff;
+
+// Transitions
+$animation-speed: 0.3s;
+$animation-speed-slow: 0.9s;
+$animation-speed-fast: 0.15s;
+
+$mouse-enter-bezier: cubic-bezier(0.82, -1.27, 0, 1.57);
+$mouse-leave-bezier: cubic-bezier(0.85, 0.85, 0, 1.57);
+
+@mixin mouse-enter-transition {
+	transition: all $animation-speed $mouse-enter-bezier;
+}
+
+@mixin mouse-leave-transition {
+	transition: all $animation-speed-fast $mouse-leave-bezier;
+}
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Fonts
+$font-family: "Poppins", sans-serif;
+
+$h1-font-size: 64px;
+$h2-font-size: 48px;
+$h3-font-size: 36px;
+$h4-font-size: 24px;
+$p-font-size: 16px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-bold: 800;
