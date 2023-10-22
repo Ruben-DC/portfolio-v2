@@ -2,7 +2,7 @@
 
 <template>
 	<div class="techno__pill">
-		<p class="techno__text accent"><slot>Vue JS</slot></p>
+		<p class="techno__text accent caption"><slot>Vue JS</slot></p>
 	</div>
 </template>
 

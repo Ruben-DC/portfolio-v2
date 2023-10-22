@@ -26,7 +26,7 @@
 				</a>
 			</h3>
 
-			<p class="project__description">
+			<p class="project__description caption">
 				<slot name="description">
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Quisquam quibusdam, voluptatum, quod, quia voluptatem
@@ -81,6 +81,7 @@
 					100%,
 				linear-gradient(to top, v.$primary-color 1px, transparent 1px)
 					100% 100%;
+
 			background-repeat: no-repeat;
 			background-size: 70px 40px;
 		}
