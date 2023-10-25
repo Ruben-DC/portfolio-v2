@@ -62,7 +62,9 @@ tfoot,
 thead,
 tr,
 th,
-td {
+td,
+header,
+footer {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -113,4 +115,11 @@ table {
 a {
 	text-decoration: none;
 	color: inherit;
+	cursor: pointer;
+}
+
+button {
+	border: none;
+	background: none;
+	cursor: pointer;
 }
