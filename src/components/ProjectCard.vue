@@ -13,7 +13,7 @@
 
 <template>
 	<div class="project__wrapper">
-		<CoolBorders>
+		<CoolBorders class="project-card">
 			<div class="project__content">
 				<h3 class="project__title">
 					<a class="project__title__link" :href="props.url">
