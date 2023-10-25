@@ -94,8 +94,6 @@
 				width: 100%;
 				height: 100%;
 
-				/* Filtre pour passer de #dcdcdc à #f25959 */
-
 				@include v.mouse-leave-transition;
 			}
 		}
