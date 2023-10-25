@@ -3,6 +3,8 @@
 	import TechnoPill from "@/components/TechnoPill.vue";
 	import ContactButton from "@/components/ContactButton.vue";
 
+	import contactMeIcon from "/src/assets/icons/contact-me.svg";
+	import projectIcon from "/src/assets/icons/project.svg";
 	import githubIcon from "/src/assets/icons/github.svg";
 	import linkedinIcon from "/src/assets/icons/linkedin.svg";
 	import mailIcon from "/src/assets/icons/email.svg";
@@ -30,7 +32,15 @@
 					<span class="accent">VueJS</span>.
 				</p>
 
-				<div class="action-buttons"></div>
+				<div class="cta-buttons">
+					<ContactButton :icon="contactMeIcon" url="#contact">
+						Me contacter
+					</ContactButton>
+
+					<ContactButton :icon="projectIcon" url="#project">
+						Mes projets
+					</ContactButton>
+				</div>
 			</div>
 
 			<div class="decoration">
@@ -45,11 +55,11 @@
 		</section>
 
 		<section id="competences">
-			<h2>Mes compétences</h2>
+			<h2><a href="#competences">Mes compétences</a></h2>
 		</section>
 
 		<section id="projects">
-			<h2>Mes projets</h2>
+			<h2><a href="#projects">Mes projets</a></h2>
 
 			<div class="carousel">
 				<ProjectCard>
@@ -86,7 +96,7 @@
 		</section>
 
 		<section id="contact">
-			<h2>Me contacter</h2>
+			<h2><a href="#contact">Me contacter</a></h2>
 
 			<div class="contact-buttons">
 				<ContactButton :icon="mailIcon" url="mailto:contact@rudendc.fr">
@@ -248,6 +258,14 @@
 					@include v.mouse-enter-transition;
 				}
 			}
+		}
+
+		.cta-buttons {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			row-gap: 20px;
+			column-gap: 50px;
 		}
 	}
 
