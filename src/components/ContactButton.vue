@@ -16,11 +16,11 @@
 
 <template>
 	<a :href="props.url" class="button">
-		<div class="button__icon__wrapper">
+		<button class="button__icon__wrapper">
 			<CoolBorders class="button__icon__borders contact-button">
 				<img class="button__icon" :src="props.icon" alt="icon" />
 			</CoolBorders>
-		</div>
+		</button>
 		<p class="button__text"><slot>Git Hub</slot></p>
 	</a>
 </template>
