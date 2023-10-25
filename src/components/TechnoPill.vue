@@ -2,7 +2,7 @@
 
 <template>
 	<div class="techno__pill">
-		<p class="techno__text accent caption"><slot>Vue JS</slot></p>
+		<p class="techno__text accent"><slot>Vue JS</slot></p>
 	</div>
 </template>
 
@@ -18,5 +18,16 @@
 
 		user-select: none;
 		background: none;
+		cursor: pointer;
+
+		&:hover {
+			background: v.$accent-color;
+			transition: all 0.2s ease-in-out;
+
+			.techno__text {
+				color: v.$background-color;
+				transition: all 0.2s ease-in-out;
+			}
+		}
 	}
 </style>

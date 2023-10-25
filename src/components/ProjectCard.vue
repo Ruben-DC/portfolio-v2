@@ -78,7 +78,7 @@
 
 			width: 411px;
 			height: fit-content;
-			margin: 60px 72px;
+			margin: 50px 62px;
 
 			@include v.mouse-leave-transition;
 		}
