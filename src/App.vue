@@ -54,8 +54,8 @@
 			</div>
 		</section>
 
-		<section id="competences">
-			<h2><a href="#competences">Mes compétences</a></h2>
+		<section id="skills">
+			<h2><a href="#skills">Mes compétences</a></h2>
 		</section>
 
 		<section id="projects">

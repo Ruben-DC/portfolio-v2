@@ -37,7 +37,7 @@
 		height: 100%;
 	}
 
-	.competence-card {
+	.skills-card {
 		background-size: 40px 70px;
 	}
 
