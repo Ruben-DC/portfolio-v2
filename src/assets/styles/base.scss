@@ -15,7 +15,7 @@ html {
 
 /* Poignée de la barre de défilement */
 ::-webkit-scrollbar-thumb {
-	background: v.$accent-color;
+	background: v.$text-color-secondary;
 	border-radius: 20px;
 }
 
@@ -234,10 +234,13 @@ h1 {
 
 h2 {
 	font-size: v.$h2-font-size;
+	@include mouse-leave-transition;
 
 	&:hover {
 		// color: v.$accent-color;
-		text-decoration: wavy underline v.$accent-color;
+		// text-decoration: wavy underline v.$accent-color;
+		margin-left: 15px;
+		@include mouse-enter-transition;
 	}
 }
 

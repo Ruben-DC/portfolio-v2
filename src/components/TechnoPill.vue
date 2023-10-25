@@ -14,7 +14,7 @@
 		border: solid 1px v.$accent-color;
 
 		width: fit-content;
-		padding: 5px 25px;
+		padding: 2px 20px;
 
 		user-select: none;
 		background: none;
