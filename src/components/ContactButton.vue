@@ -15,14 +15,16 @@
 </script>
 
 <template>
-	<a :href="props.url" class="button">
-		<button class="button__icon__wrapper">
-			<CoolBorders class="button__icon__borders contact-button">
-				<img class="button__icon" :src="props.icon" alt="icon" />
-			</CoolBorders>
-		</button>
-		<p class="button__text"><slot>Git Hub</slot></p>
-	</a>
+	<button>
+		<a :href="props.url" class="button">
+			<div class="button__icon__wrapper">
+				<CoolBorders class="button__icon__borders contact-button">
+					<img class="button__icon" :src="props.icon" alt="icon" />
+				</CoolBorders>
+			</div>
+			<p class="button__text"><slot>Git Hub</slot></p>
+		</a>
+	</button>
 </template>
 
 <style lang="scss" scoped>
@@ -107,6 +109,7 @@
 				position: absolute;
 				bottom: -3px;
 				z-index: -1;
+
 				width: 103%;
 				height: 2px;
 				background-color: v.$accent-color;
