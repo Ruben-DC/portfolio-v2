@@ -1,7 +1,7 @@
 <script setup>
 	import ProjectCard from "@/components/ProjectCard.vue";
 	import TechnoPill from "@/components/TechnoPill.vue";
-	import ContactButton from "@/components/ContactButton.vue";
+	import CoolButton from "@/components/CoolButton.vue";
 
 	import contactMeIcon from "/src/assets/icons/contact-me.svg";
 	import projectIcon from "/src/assets/icons/project.svg";
@@ -33,13 +33,13 @@
 				</p>
 
 				<div class="cta-buttons">
-					<ContactButton :icon="contactMeIcon" url="#contact">
+					<CoolButton :icon="contactMeIcon" url="#contact">
 						Me contacter
-					</ContactButton>
+					</CoolButton>
 
-					<ContactButton :icon="projectIcon" url="#project">
+					<CoolButton :icon="projectIcon" url="#project">
 						Mes projets
-					</ContactButton>
+					</CoolButton>
 				</div>
 			</div>
 
@@ -99,33 +99,33 @@
 			<h2><a href="#contact">Me contacter</a></h2>
 
 			<div class="contact-buttons">
-				<ContactButton :icon="mailIcon" url="mailto:contact@rudendc.fr">
+				<CoolButton :icon="mailIcon" url="mailto:contact@rudendc.fr">
 					contact@rubenc.fr
-				</ContactButton>
+				</CoolButton>
 
-				<ContactButton
+				<CoolButton
 					:icon="githubIcon"
 					url="https://github.com/Ruben-DC"
 					target="_blank"
 				>
 					github.com/Ruben-DC
-				</ContactButton>
+				</CoolButton>
 
-				<ContactButton
+				<CoolButton
 					:icon="linkedinIcon"
 					url="https://www.linkedin.com/in/rub%C3%A9n-de-carvalho-327a5b278"
 					target="_blank"
 				>
 					linkedin.com/in/Ruben-DC
-				</ContactButton>
+				</CoolButton>
 
-				<ContactButton
+				<CoolButton
 					:icon="devtoIcon"
 					url="https://dev.to/rubendc"
 					target="_blank"
 				>
 					dev.to/rubendc
-				</ContactButton>
+				</CoolButton>
 			</div>
 		</section>
 	</main>
