@@ -34,6 +34,18 @@
 				100%;
 
 		background-repeat: no-repeat;
+		height: 100%;
+	}
+
+	.competence-card {
+		background-size: 40px 70px;
+	}
+
+	.project-card {
 		background-size: 70px 40px;
+	}
+
+	.contact-button {
+		background-size: 10px 10px;
 	}
 </style>
