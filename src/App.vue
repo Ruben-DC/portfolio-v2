@@ -6,6 +6,7 @@
 	const githubIcon = "/src/assets/icons/github.svg";
 	const linkedinIcon = "/src/assets/icons/linkedin.svg";
 	const mailIcon = "/src/assets/icons/email.svg";
+	const devtoIcon = "/src/assets/icons/devto.svg";
 </script>
 
 <template>
@@ -106,6 +107,14 @@
 					target="_blank"
 				>
 					linkedin.com/in/Ruben-DC
+				</ContactButton>
+
+				<ContactButton
+					:icon="devtoIcon"
+					url="https://dev.to/rubendc"
+					target="_blank"
+				>
+					dev.to/rubendc
 				</ContactButton>
 			</div>
 		</section>
@@ -249,7 +258,7 @@
 			align-items: center;
 			gap: 35px;
 
-			height: 330px;
+			height: 400px;
 
 			overflow-x: scroll;
 			overflow-y: hidden;

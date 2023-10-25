@@ -18,13 +18,7 @@
 	<a :href="props.url" class="button">
 		<div class="button__icon__wrapper">
 			<CoolBorders class="button__icon__borders contact-button">
-				<object
-					:data="props.icon"
-					type="image/svg+xml"
-					class="button__icon"
-				></object>
-
-				<!-- <img class="button__icon" :src="props.icon" alt="icon" /> -->
+				<img class="button__icon" :src="props.icon" alt="icon" />
 			</CoolBorders>
 		</div>
 		<p class="button__text"><slot>Git Hub</slot></p>
@@ -58,12 +52,12 @@
 				}
 
 				&__icon {
+					width: 16px;
+					height: 16px;
 					@include v.mouse-enter-transition;
 				}
 
 				&__text {
-					// font-style: italic;
-
 					@include v.mouse-enter-transition;
 
 					&::before {
