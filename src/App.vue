@@ -3,10 +3,10 @@
 	import TechnoPill from "@/components/TechnoPill.vue";
 	import ContactButton from "@/components/ContactButton.vue";
 
-	const githubIcon = "/src/assets/icons/github.svg";
-	const linkedinIcon = "/src/assets/icons/linkedin.svg";
-	const mailIcon = "/src/assets/icons/email.svg";
-	const devtoIcon = "/src/assets/icons/devto.svg";
+	import githubIcon from "/src/assets/icons/github.svg";
+	import linkedinIcon from "/src/assets/icons/linkedin.svg";
+	import mailIcon from "/src/assets/icons/email.svg";
+	import devtoIcon from "/src/assets/icons/devto.svg";
 </script>
 
 <template>
@@ -137,6 +137,7 @@
 	@use "@/assets/styles/variables.scss" as v;
 
 	header {
+		z-index: 1000;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -181,7 +182,7 @@
 		align-items: center;
 
 		.presentation {
-			z-index: 1000;
+			z-index: 500;
 			position: absolute;
 
 			display: flex;
