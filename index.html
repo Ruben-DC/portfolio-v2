@@ -11,8 +11,13 @@
 		<title>Mon Portfolio</title>
 	</head>
 	<body>
-			<div id="app"></div>
-		</div>
+		<div id="app"></div>
+
+		<svg id="noise-svg">
+			<filter id="noise-filter">
+				<feTurbulence type="turbulence" baseFrequency="0.50" />
+			</filter>
+		</svg>
 		<script type="module" src="/src/main.js"></script>
 	</body>
 </html>
