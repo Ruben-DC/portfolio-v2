@@ -64,6 +64,8 @@
 
 					&::before {
 						height: 16px;
+						background-color: v.$accent-color;
+
 						@include v.mouse-enter-transition;
 					}
 				}
@@ -112,7 +114,7 @@
 
 				width: 103%;
 				height: 2px;
-				background-color: v.$accent-color;
+				background-color: v.$primary-color;
 				@include v.mouse-leave-transition;
 			}
 		}
