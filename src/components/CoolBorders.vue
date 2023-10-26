@@ -38,7 +38,7 @@
 	}
 
 	.skills-card {
-		background-size: 40px 70px;
+		background-size: 40px 60px;
 	}
 
 	.project-card {

@@ -1,4 +1,5 @@
 <script setup>
+	import SkillCard from "./components/SkillCard.vue";
 	import ProjectCard from "@/components/ProjectCard.vue";
 	import TechnoPill from "@/components/TechnoPill.vue";
 	import CoolButton from "@/components/CoolButton.vue";
@@ -37,7 +38,7 @@
 						Me contacter
 					</CoolButton>
 
-					<CoolButton :icon="projectIcon" url="#project">
+					<CoolButton :icon="projectIcon" url="#projects">
 						Mes projets
 					</CoolButton>
 				</div>
@@ -56,6 +57,19 @@
 
 		<section id="skills">
 			<h2><a href="#skills">Mes compétences</a></h2>
+
+			<ul class="skills-category-list">
+				<SkillCard>
+					<template #skills-category-title> Front-end </template>
+
+					<template #skills-list>
+						<li>HTML</li>
+						<li>SCSS</li>
+						<li>Javascript</li>
+						<li class="important">VueJS</li>
+					</template>
+				</SkillCard>
+			</ul>
 		</section>
 
 		<section id="projects">
@@ -266,6 +280,19 @@
 			flex-wrap: wrap;
 			row-gap: 20px;
 			column-gap: 50px;
+		}
+	}
+
+	#skills {
+		// scroll-margin: 100px;
+		height: fit-content;
+
+		margin-bottom: 170px;
+
+		.skill__card {
+			li.important {
+				color: v.$accent-color;
+			}
 		}
 	}
 
