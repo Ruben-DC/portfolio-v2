@@ -289,8 +289,10 @@ p {
 }
 
 li {
-	color: v.$text-color;
+	font-family: v.$font-family;
 	font-size: v.$p-font-size;
 	font-weight: v.$font-weight-regular;
+
+	color: v.$text-color;
 	line-height: 1.4;
 }
