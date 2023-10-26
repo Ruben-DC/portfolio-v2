@@ -233,14 +233,38 @@ h1 {
 }
 
 h2 {
+	position: relative;
 	font-size: v.$h2-font-size;
 	@include mouse-leave-transition;
+
+	&::before {
+		content: "";
+		z-index: -1;
+
+		position: absolute;
+		left: -35px;
+		top: 50%;
+		transform: translateY(-50%);
+
+		height: 100%;
+		width: 0px;
+
+		background: v.$accent-color;
+
+		@include mouse-leave-transition;
+	}
 
 	&:hover {
 		// color: v.$accent-color;
 		// text-decoration: wavy underline v.$accent-color;
 		margin-left: 15px;
 		@include mouse-enter-transition;
+
+		&::before {
+			left: -50px;
+			width: 30px;
+			@include mouse-enter-transition;
+		}
 	}
 }
 
