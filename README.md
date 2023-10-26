@@ -6,3 +6,4 @@ Mon portfolio personnel créé avec Vue.js pour présenter mes projets et mon ex
 
 ## Technologies Utilisées
 - Vue.js
+- Scss
