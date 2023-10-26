@@ -58,8 +58,8 @@
 			justify-content: center;
 			align-items: center;
 
-			min-width: 555px;
 			max-width: 555px;
+			width: 100%;
 			height: fit-content;
 
 			&:hover {
@@ -76,7 +76,8 @@
 			gap: 25px;
 			background: none;
 
-			width: 411px;
+			max-width: 411px;
+			width: 100%;
 			height: fit-content;
 			margin: 50px 62px;
 
@@ -87,6 +88,29 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: 25px;
+		}
+	}
+
+	@media screen and (max-width: v.$breakpoint-mobile) {
+		.project {
+			&__wrapper {
+				width: 100%;
+				height: fit-content;
+			}
+
+			&__content {
+				margin: 45px 20px;
+			}
+
+			&__details {
+				gap: 10px;
+				width: 85%;
+			}
+
+			&__description {
+				font-size: 0.9rem;
+				width: 85%;
+			}
 		}
 	}
 </style>

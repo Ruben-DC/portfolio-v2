@@ -270,6 +270,7 @@
 	}
 
 	#projects {
+		height: fit-content;
 		.carousel {
 			display: grid;
 			grid-auto-flow: column;
@@ -284,7 +285,13 @@
 
 			@media screen and (max-width: v.$breakpoint-mobile) {
 				display: flex;
-				height: auto;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				height: 100%;
+				width: 100%;
+				overflow-x: hidden;
 			}
 		}
 	}
@@ -299,20 +306,10 @@
 
 			align-items: center;
 			flex-wrap: wrap;
-
-			// @media screen and (max-width: v.$breakpoint-tablet) {
-			// 	flex-direction: column;
-			// 	column-gap: normal;
-			// 	align-items: flex-start;
-			// 	justify-content: center;
-			// }
 		}
 
 		.contact-button {
 			margin-right: 20px;
-			// @media screen and (max-width: v.$breakpoint-mobile) {
-			// 	margin-right: 0;
-			// }
 		}
 	}
 
