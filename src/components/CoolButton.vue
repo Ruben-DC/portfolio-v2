@@ -63,7 +63,7 @@
 					@include v.mouse-enter-transition;
 
 					&::before {
-						height: 16px;
+						height: 15px;
 						background-color: v.$accent-color;
 
 						@include v.mouse-enter-transition;
