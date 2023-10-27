@@ -34,11 +34,19 @@
 				</p>
 
 				<div class="cta-buttons">
-					<CoolButton :icon="contactMeIcon" url="#contact">
+					<CoolButton
+						:icon="contactMeIcon"
+						url="#contact"
+						target="_self"
+					>
 						Me contacter
 					</CoolButton>
 
-					<CoolButton :icon="projectIcon" url="#projects">
+					<CoolButton
+						:icon="projectIcon"
+						url="#projects"
+						target="_self"
+					>
 						Mes projets
 					</CoolButton>
 				</div>
@@ -113,7 +121,11 @@
 			<h2><a href="#contact">Me contacter</a></h2>
 
 			<div class="contact-buttons">
-				<CoolButton :icon="mailIcon" url="mailto:contact@rudendc.fr">
+				<CoolButton
+					:icon="mailIcon"
+					url="mailto:contact@rudendc.fr"
+					target="_self"
+				>
 					contact@rubenc.fr
 				</CoolButton>
 
