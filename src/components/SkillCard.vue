@@ -38,15 +38,6 @@
 
 			transition: all 0.2s ease-in-out;
 			user-select: none;
-
-			&:hover {
-				// transform: scale(1.05);
-
-				.skill__title {
-					// color: v.$accent-color;
-					// text-decoration: wavy underline v.$accent-color;
-				}
-			}
 		}
 
 		&__title {
@@ -61,16 +52,6 @@
 
 			width: 100%;
 			height: fit-content;
-		}
-
-		li {
-			font-size: 16px;
-			font-weight: 400;
-			list-style: square;
-
-			&.important {
-				font-weight: 700;
-			}
 		}
 	}
 </style>

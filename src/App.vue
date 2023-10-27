@@ -4,9 +4,19 @@
 	import TechnoPill from "@/components/TechnoPill.vue";
 	import CoolButton from "@/components/CoolButton.vue";
 
+	import htmlIcon from "/src/assets/icons/html.svg";
+	import cssIcon from "/src/assets/icons/css.svg";
+	import scssIcon from "/src/assets/icons/scss.svg";
+	import jsIcon from "/src/assets/icons/javascript.svg";
+	import vueIcon from "/src/assets/icons/vue.svg";
+	import reactIcon from "/src/assets/icons/react.svg";
+
+	import githubIcon from "/src/assets/icons/github.svg";
+	import figmaIcon from "/src/assets/icons/figma.svg";
+	import xdIcon from "/src/assets/icons/xd.svg";
+
 	import contactMeIcon from "/src/assets/icons/contact-me.svg";
 	import projectIcon from "/src/assets/icons/project.svg";
-	import githubIcon from "/src/assets/icons/github.svg";
 	import linkedinIcon from "/src/assets/icons/linkedin.svg";
 	import mailIcon from "/src/assets/icons/email.svg";
 	import devtoIcon from "/src/assets/icons/devto.svg";
@@ -66,18 +76,69 @@
 		<section id="skills">
 			<h2><a href="#skills">Mes compétences</a></h2>
 
-			<ul class="skills-category-list">
+			<div class="skills-categories-wrapper">
 				<SkillCard>
 					<template #skills-category-title> Front-end </template>
 
 					<template #skills-list>
-						<li>HTML</li>
-						<li>SCSS</li>
-						<li>Javascript</li>
-						<li class="important">VueJS</li>
+						<li>
+							<span class="skill-icon">
+								<img :src="htmlIcon" alt="icone html" />
+							</span>
+
+							HTML
+						</li>
+
+						<li class="important-skill">
+							<span class="skill-icon">
+								<img :src="scssIcon" alt="icone sass" />
+							</span>
+
+							SCSS
+						</li>
+
+						<li>
+							<span class="skill-icon">
+								<img :src="jsIcon" alt="icone javascript" />
+							</span>
+
+							Javascript
+						</li>
+
+						<li class="important-skill">
+							<span class="skill-icon">
+								<img :src="vueIcon" alt="Icone VueJS" />
+							</span>
+
+							VueJS
+						</li>
 					</template>
 				</SkillCard>
-			</ul>
+
+				<SkillCard>
+					<template #skills-category-title> Autres </template>
+
+					<template #skills-list>
+						<li>
+							<span class="skill-icon"
+								><img
+									:src="githubIcon"
+									alt="icone Github" /></span
+							>GitHub
+						</li>
+						<li>
+							<span class="skill-icon"
+								><img :src="figmaIcon" alt="" /></span
+							>Figma
+						</li>
+						<li>
+							<span class="skill-icon"
+								><img :src="xdIcon" alt="" /></span
+							>AdobeXd
+						</li>
+					</template>
+				</SkillCard>
+			</div>
 		</section>
 
 		<section id="projects">
@@ -290,14 +351,47 @@
 	}
 
 	#skills {
-		// scroll-margin: 100px;
 		height: fit-content;
 
 		margin-bottom: 170px;
 
+		.skills-categories-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 70px;
+		}
+
 		.skill__card {
-			li.important {
+			li {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				gap: 10px;
+			}
+
+			li.important-skill {
 				color: v.$accent-color;
+
+				background: -webkit-linear-gradient(
+					0deg,
+					v.$accent-color 25%,
+					v.$third-blob-color 100%
+				);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+
+				.skill-icon {
+					/* Filtre pour passer de #dcdcdc à #f25959 */
+					filter: invert(52%) sepia(95%) saturate(2076%)
+						hue-rotate(326deg) brightness(99%) contrast(91%);
+				}
+			}
+
+			.skill-icon img {
+				height: v.$p-font-size;
+				width: v.$p-font-size;
 			}
 		}
 	}
@@ -399,18 +493,21 @@
 				}
 			}
 		}
-
-		// #projects {
-		// 	.carousel {
-		// 		padding-bottom: 5px;
-		// 	}
-		// }
 	}
 
 	@media screen and (max-width: v.$breakpoint-mobile) {
 		#home {
 			.blob-container {
 				display: none;
+			}
+		}
+
+		#skills {
+			.skills-categories-wrapper {
+				width: 100%;
+				flex-direction: column;
+				// justify-content: center;
+				align-items: center;
 			}
 		}
 
