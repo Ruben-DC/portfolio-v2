@@ -11,12 +11,16 @@
 			type: String,
 			default: "",
 		},
+		target: {
+			type: String,
+			default: "_blank",
+		},
 	});
 </script>
 
 <template>
 	<button>
-		<a :href="props.url" class="button">
+		<a :href="props.url" class="button" :target="target">
 			<div class="button__icon__wrapper">
 				<CoolBorders class="button__icon__borders contact-button">
 					<img class="button__icon" :src="props.icon" alt="icon" />

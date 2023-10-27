@@ -120,7 +120,6 @@
 				<CoolButton
 					:icon="githubIcon"
 					url="https://github.com/Ruben-DC"
-					target="_blank"
 				>
 					github.com/Ruben-DC
 				</CoolButton>
@@ -128,16 +127,11 @@
 				<CoolButton
 					:icon="linkedinIcon"
 					url="https://www.linkedin.com/in/rub%C3%A9n-de-carvalho-327a5b278"
-					target="_blank"
 				>
 					linkedin.com/in/Ruben-DC
 				</CoolButton>
 
-				<CoolButton
-					:icon="devtoIcon"
-					url="https://dev.to/rubendc"
-					target="_blank"
-				>
+				<CoolButton :icon="devtoIcon" url="https://dev.to/rubendc">
 					dev.to/rubendc
 				</CoolButton>
 			</div>
