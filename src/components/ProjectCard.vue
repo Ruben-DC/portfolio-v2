@@ -64,7 +64,7 @@
 
 			&:hover {
 				.project__content {
-					margin: 35px;
+					margin: 30px;
 					@include v.mouse-enter-transition;
 				}
 			}
@@ -79,7 +79,8 @@
 			max-width: 411px;
 			width: 100%;
 			height: fit-content;
-			margin: 50px 62px;
+			// margin: 45px 20px;
+			margin: 40px 52px;
 
 			@include v.mouse-leave-transition;
 		}

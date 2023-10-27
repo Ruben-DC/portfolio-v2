@@ -14,23 +14,23 @@
 
 		background: linear-gradient(
 					to right,
-					v.$primary-color 1px,
-					transparent 1px
+					v.$primary-color 2px,
+					transparent 2px
 				)
 				0 0,
-			linear-gradient(to right, v.$primary-color 1px, transparent 1px) 0
+			linear-gradient(to right, v.$primary-color 2px, transparent 2px) 0
 				100%,
-			linear-gradient(to left, v.$primary-color 1px, transparent 1px) 100%
+			linear-gradient(to left, v.$primary-color 2px, transparent 2px) 100%
 				0,
-			linear-gradient(to left, v.$primary-color 1px, transparent 1px) 100%
+			linear-gradient(to left, v.$primary-color 2px, transparent 2px) 100%
 				100%,
-			linear-gradient(to bottom, v.$primary-color 1px, transparent 1px) 0
+			linear-gradient(to bottom, v.$primary-color 2px, transparent 2px) 0
 				0,
-			linear-gradient(to bottom, v.$primary-color 1px, transparent 1px)
+			linear-gradient(to bottom, v.$primary-color 2px, transparent 2px)
 				100% 0,
-			linear-gradient(to top, v.$primary-color 1px, transparent 1px) 0
+			linear-gradient(to top, v.$primary-color 2px, transparent 2px) 0
 				100%,
-			linear-gradient(to top, v.$primary-color 1px, transparent 1px) 100%
+			linear-gradient(to top, v.$primary-color 2px, transparent 2px) 100%
 				100%;
 
 		background-repeat: no-repeat;
@@ -38,7 +38,7 @@
 	}
 
 	.skills-card {
-		background-size: 40px 60px;
+		background-size: 20px 20px;
 	}
 
 	.project-card {

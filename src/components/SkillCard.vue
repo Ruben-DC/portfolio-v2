@@ -34,7 +34,7 @@
 			width: fit-content;
 			height: fit-content;
 
-			padding: 30px 40px;
+			padding: 40px;
 
 			transition: all 0.2s ease-in-out;
 			user-select: none;
@@ -67,6 +67,10 @@
 			font-size: 16px;
 			font-weight: 400;
 			list-style: square;
+
+			&.important {
+				font-weight: 700;
+			}
 		}
 	}
 </style>
