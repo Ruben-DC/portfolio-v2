@@ -1,5 +1,11 @@
 <script setup>
 	import CoolBorders from "./CoolBorders.vue";
+	import SkillItem from "./SkillItem.vue";
+
+	import htmlIcon from "/src/assets/icons/html.svg";
+	import cssIcon from "/src/assets/icons/css.svg";
+	import jsIcon from "/src/assets/icons/javascript.svg";
+	import vueIcon from "/src/assets/icons/vue.svg";
 </script>
 
 <template>
@@ -11,10 +17,12 @@
 
 			<ul class="skill__list">
 				<slot name="skills-list">
-					<li>HTML</li>
-					<li>CSS</li>
-					<li>Javascript</li>
-					<li>VueJS</li>
+					<SkillItem :iconUrl="htmlIcon">HTML</SkillItem>
+					<SkillItem :iconUrl="cssIcon">Css</SkillItem>
+					<SkillItem :iconUrl="jsIcon">JavaScript</SkillItem>
+					<SkillItem :isImportant="true" :iconUrl="vueIcon">
+						VueJS
+					</SkillItem>
 				</slot>
 			</ul>
 		</div>
@@ -31,7 +39,9 @@
 			justify-content: center;
 			align-items: center;
 
+			min-width: 220px;
 			width: fit-content;
+
 			height: fit-content;
 
 			padding: 40px;

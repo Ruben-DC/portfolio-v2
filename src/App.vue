@@ -1,5 +1,6 @@
 <script setup>
 	import SkillCard from "./components/SkillCard.vue";
+	import SkillItem from "./components/SkillItem.vue";
 	import ProjectCard from "@/components/ProjectCard.vue";
 	import TechnoPill from "@/components/TechnoPill.vue";
 	import CoolButton from "@/components/CoolButton.vue";
@@ -81,37 +82,17 @@
 					<template #skills-category-title> Front-end </template>
 
 					<template #skills-list>
-						<li>
-							<span class="skill-icon">
-								<img :src="htmlIcon" alt="icone html" />
-							</span>
+						<SkillItem :iconUrl="htmlIcon"> HTML </SkillItem>
 
-							HTML
-						</li>
-
-						<li class="important-skill">
-							<span class="skill-icon">
-								<img :src="scssIcon" alt="icone sass" />
-							</span>
-
+						<SkillItem :isImportant="true" :iconUrl="cssIcon">
 							SCSS
-						</li>
+						</SkillItem>
 
-						<li>
-							<span class="skill-icon">
-								<img :src="jsIcon" alt="icone javascript" />
-							</span>
+						<SkillItem :iconUrl="jsIcon"> Javascript </SkillItem>
 
-							Javascript
-						</li>
-
-						<li class="important-skill">
-							<span class="skill-icon">
-								<img :src="vueIcon" alt="Icone VueJS" />
-							</span>
-
-							VueJS
-						</li>
+						<SkillItem :isImportant="true" :iconUrl="vueIcon">
+							Vue JS
+						</SkillItem>
 					</template>
 				</SkillCard>
 
@@ -119,23 +100,13 @@
 					<template #skills-category-title> Autres </template>
 
 					<template #skills-list>
-						<li>
-							<span class="skill-icon"
-								><img
-									:src="githubIcon"
-									alt="icone Github" /></span
-							>GitHub
-						</li>
-						<li>
-							<span class="skill-icon"
-								><img :src="figmaIcon" alt="" /></span
-							>Figma
-						</li>
-						<li>
-							<span class="skill-icon"
-								><img :src="xdIcon" alt="" /></span
-							>AdobeXd
-						</li>
+						<SkillItem :isImportant="true" :iconUrl="githubIcon">
+							GitHub
+						</SkillItem>
+
+						<SkillItem :iconUrl="figmaIcon"> Figma </SkillItem>
+
+						<SkillItem :iconUrl="xdIcon"> AdobeXd </SkillItem>
 					</template>
 				</SkillCard>
 			</div>
@@ -146,7 +117,7 @@
 
 			<div class="carousel">
 				<ProjectCard>
-					<template #title> 🎥 Cinémotion </template>
+					<template #title> Cinémotion </template>
 
 					<template #description>
 						Cinemotion est une application front-end où les
@@ -161,7 +132,7 @@
 				</ProjectCard>
 
 				<ProjectCard>
-					<template #title> 💭 Homttchat </template>
+					<template #title> Homttchat </template>
 
 					<template #description>
 						Homttchat est une application de chat en ligne où les
@@ -361,38 +332,6 @@
 			align-items: flex-start;
 			flex-wrap: wrap;
 			gap: 70px;
-		}
-
-		.skill__card {
-			li {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: nowrap;
-				gap: 10px;
-			}
-
-			li.important-skill {
-				color: v.$accent-color;
-
-				background: -webkit-linear-gradient(
-					0deg,
-					v.$accent-color 25%,
-					v.$third-blob-color 100%
-				);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-
-				.skill-icon {
-					/* Filtre pour passer de #dcdcdc à #f25959 */
-					filter: invert(52%) sepia(95%) saturate(2076%)
-						hue-rotate(326deg) brightness(99%) contrast(91%);
-				}
-			}
-
-			.skill-icon img {
-				height: v.$p-font-size;
-				width: v.$p-font-size;
-			}
 		}
 	}
 
