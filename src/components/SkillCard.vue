@@ -1,6 +1,20 @@
 <script setup>
-	import CoolBorders from "./CoolBorders.vue";
+	import { ref, onMounted } from "vue";
+
+	import VanillaTilt from "vanilla-tilt";
 	import SkillItem from "./SkillItem.vue";
+
+	const skillCard = ref(null);
+
+	onMounted(() => {
+		VanillaTilt.init(skillCard.value, {
+			max: 5,
+			speed: 400,
+			glare: true,
+			"max-glare": 0.1,
+			scale: 1.02,
+		});
+	});
 
 	import htmlIcon from "/src/assets/icons/html.svg";
 	import cssIcon from "/src/assets/icons/css.svg";
@@ -9,59 +23,56 @@
 </script>
 
 <template>
-	<CoolBorders class="skill__card skills-card">
-		<div class="skill__content">
-			<h4 class="skill__title">
-				<slot name="skills-category-title">Front-end</slot>
-			</h4>
+	<div class="skill__wrapper" ref="skillCard">
+		<h4 class="skill__title">
+			<slot name="skills-category-title">Front-end</slot>
+		</h4>
 
-			<ul class="skill__list">
-				<slot name="skills-list">
-					<SkillItem :iconUrl="htmlIcon">HTML</SkillItem>
-					<SkillItem :iconUrl="cssIcon">Css</SkillItem>
-					<SkillItem :iconUrl="jsIcon">JavaScript</SkillItem>
-					<SkillItem :isImportant="true" :iconUrl="vueIcon">
-						VueJS
-					</SkillItem>
-				</slot>
-			</ul>
-		</div>
-	</CoolBorders>
+		<ul class="skill__list">
+			<slot name="skills-list">
+				<SkillItem :iconUrl="htmlIcon">HTML</SkillItem>
+				<SkillItem :iconUrl="cssIcon">Css</SkillItem>
+				<SkillItem :iconUrl="jsIcon">JavaScript</SkillItem>
+				<SkillItem :isImportant="true" :iconUrl="vueIcon">
+					VueJS
+				</SkillItem>
+			</slot>
+		</ul>
+	</div>
 </template>
 
 <style lang="scss" scoped>
 	@use "@/assets/styles/variables.scss" as v;
 
 	.skill {
-		&__card {
+		&__wrapper {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-
-			min-width: 220px;
-			width: fit-content;
+			justify-content: flex-start;
+			align-items: flex-start;
 
 			height: fit-content;
+			padding: 25px;
 
-			padding: 40px;
-
-			transition: all 0.2s ease-in-out;
-			user-select: none;
+			background: none;
+			backdrop-filter: blur(0.8px);
+			-webkit-backdrop-filter: blur(0.8px);
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.08);
 		}
 
 		&__title {
+			text-align: center;
+			width: 100%;
 			margin-bottom: 25px;
 		}
 
 		&__list {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
+			align-items: flex-start;
 			gap: 15px;
-
-			width: 100%;
-			height: fit-content;
 		}
 	}
 </style>

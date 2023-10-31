@@ -2,10 +2,10 @@
 	import { ref, onMounted } from "vue";
 	import VanillaTilt from "vanilla-tilt";
 
-	const card = ref(null);
+	const projectCard = ref(null);
 
 	onMounted(() => {
-		VanillaTilt.init(card.value, {
+		VanillaTilt.init(projectCard.value, {
 			max: 5,
 			speed: 400,
 			glare: true,
@@ -25,7 +25,7 @@
 </script>
 
 <template>
-	<div class="project__wrapper" ref="card">
+	<div class="project__wrapper" ref="projectCard">
 		<a class="project__title__link" :href="props.url">
 			<h3 class="project__title">
 				<slot name="title">Titre du projet</slot>

@@ -84,7 +84,7 @@
 					<template #skills-list>
 						<SkillItem :iconUrl="htmlIcon"> HTML </SkillItem>
 
-						<SkillItem :isImportant="true" :iconUrl="cssIcon">
+						<SkillItem :isImportant="true" :iconUrl="scssIcon">
 							SCSS
 						</SkillItem>
 
@@ -116,7 +116,7 @@
 			<h2><a href="#projects">Mes projets</a></h2>
 
 			<div class="carousel">
-				<ProjectCard url="https://rubendc.tech">
+				<ProjectCard>
 					<template #title> Cinémotion </template>
 
 					<template #description>
@@ -331,18 +331,13 @@
 			flex-direction: row;
 			align-items: flex-start;
 			flex-wrap: wrap;
-			gap: 70px;
+			gap: 35px;
 		}
 	}
 
 	#projects {
 		height: fit-content;
 		.carousel {
-			// display: grid;
-			// grid-auto-flow: column;
-			// grid-auto-columns: 555px;
-			// align-items: center;
-
 			display: flex;
 			flex-direction: row;
 			gap: 35px;
@@ -352,7 +347,6 @@
 			overflow-y: hidden;
 
 			@media screen and (max-width: v.$breakpoint-mobile) {
-				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
