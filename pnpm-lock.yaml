@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  vanilla-tilt:
+    specifier: ^1.8.1
+    version: 1.8.1
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -522,6 +525,10 @@ packages:
     dependencies:
       is-number: 7.0.0
     dev: true
+
+  /vanilla-tilt@1.8.1:
+    resolution: {integrity: sha512-hPB1XUsnh+SIeVSW2beb5RnuFxz4ZNgxjGD78o52F49gS4xaoLeEMh9qrQnJrnEn/vjjBI7IlxrrXmz4tGV0Kw==}
+    dev: false
 
   /vite@4.4.5(sass@1.69.3):
     resolution: {integrity: sha512-4m5kEtAWHYr0O1Fu7rZp64CfO1PsRGZlD3TAB32UmQlpd7qg15VF7ROqGN5CyqN7HFuwr7ICNM2+fDWRqFEKaA==}
