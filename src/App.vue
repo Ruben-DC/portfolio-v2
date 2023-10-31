@@ -116,7 +116,7 @@
 			<h2><a href="#projects">Mes projets</a></h2>
 
 			<div class="carousel">
-				<ProjectCard>
+				<ProjectCard url="https://rubendc.tech">
 					<template #title> Cinémotion </template>
 
 					<template #description>
@@ -338,13 +338,15 @@
 	#projects {
 		height: fit-content;
 		.carousel {
-			display: grid;
-			grid-auto-flow: column;
-			grid-auto-columns: 555px;
-			align-items: center;
-			gap: 35px;
+			// display: grid;
+			// grid-auto-flow: column;
+			// grid-auto-columns: 555px;
+			// align-items: center;
 
-			height: 400px;
+			display: flex;
+			flex-direction: row;
+			gap: 35px;
+			padding: 5px 0;
 
 			overflow-x: scroll;
 			overflow-y: hidden;

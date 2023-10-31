@@ -1,7 +1,18 @@
 <script setup>
-	import { ref } from "vue";
-	import TechnoPill from "./TechnoPill.vue";
-	import CoolBorders from "./CoolBorders.vue";
+	import { ref, onMounted } from "vue";
+	import VanillaTilt from "vanilla-tilt";
+
+	const card = ref(null);
+
+	onMounted(() => {
+		VanillaTilt.init(card.value, {
+			max: 5,
+			speed: 400,
+			glare: true,
+			"max-glare": 0.1,
+			scale: 1.02,
+		});
+	});
 
 	const props = defineProps({
 		url: {
@@ -9,42 +20,39 @@
 			default: "#projects",
 		},
 	});
+
+	import linkIcon from "/src/assets/icons/link.svg";
 </script>
 
 <template>
-	<div class="project__wrapper">
-		<CoolBorders class="project-card">
-			<div class="project__content">
-				<h3 class="project__title">
-					<a class="project__title__link" :href="props.url">
-						<slot name="title">Titre du projet</slot>
+	<div class="project__wrapper" ref="card">
+		<a class="project__title__link" :href="props.url">
+			<h3 class="project__title">
+				<slot name="title">Titre du projet</slot>
 
-						<span
-							class="project__project-link__icon"
-							v-if="props.url !== '#projects'"
-						>
-							<img src="" alt="link icon" />
-						</span>
-					</a>
-				</h3>
+				<span
+					class="project__project-link__icon"
+					v-if="props.url !== '#projects'"
+				>
+					<img :src="linkIcon" alt="link icon" />
+				</span>
+			</h3>
+		</a>
 
-				<p class="project__description caption">
-					<slot name="description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit.
-						Quisquam quibusdam, voluptatum, quod, quia voluptatem
-						voluptas quos asperiores quae voluptatibus doloribus
-						quas.
-					</slot>
-				</p>
+		<p class="project__description caption">
+			<slot name="description">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Quisquam quibusdam, voluptatum, quod, quia voluptatem voluptas
+				quos asperiores quae voluptatibus doloribus quas.
+			</slot>
+		</p>
 
-				<div class="project__details">
-					<slot name="technos">
-						<TechnoPill>Vue JS</TechnoPill>
-						<TechnoPill>Express JS</TechnoPill>
-					</slot>
-				</div>
-			</div>
-		</CoolBorders>
+		<div class="project__details">
+			<slot name="technos">
+				<TechnoPill>Vue JS</TechnoPill>
+				<TechnoPill>Express JS</TechnoPill>
+			</slot>
+		</div>
 	</div>
 </template>
 
@@ -53,65 +61,45 @@
 
 	.project {
 		&__wrapper {
-			position: relative;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			max-width: 555px;
-			width: 100%;
-			height: fit-content;
-
-			&:hover {
-				.project__content {
-					margin: 30px;
-					@include v.mouse-enter-transition;
-				}
-			}
-		}
-
-		&__content {
 			display: flex;
 			flex-direction: column;
-			gap: 25px;
-			background: none;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: 15px;
 
-			max-width: 411px;
 			width: 100%;
 			height: fit-content;
-			// margin: 45px 20px;
-			margin: 40px 52px;
+			padding: 25px;
+			margin-bottom: 15px;
 
-			@include v.mouse-leave-transition;
+			background: none;
+			backdrop-filter: blur(0.8px);
+			-webkit-backdrop-filter: blur(0.8px);
+			border-radius: 10px;
+			border: 1px solid rgba(255, 255, 255, 0.08);
+		}
+
+		&__title {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 15px;
+		}
+
+		&__description {
+			width: 100%;
+			max-width: 500px;
 		}
 
 		&__details {
 			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
 			flex-wrap: wrap;
-			gap: 25px;
-		}
-	}
 
-	@media screen and (max-width: v.$breakpoint-mobile) {
-		.project {
-			&__wrapper {
-				width: 100%;
-				height: fit-content;
-			}
-
-			&__content {
-				margin: 45px 20px;
-			}
-
-			&__details {
-				gap: 10px;
-				width: 85%;
-			}
-
-			&__description {
-				font-size: 0.9rem;
-				width: 85%;
-			}
+			gap: 15px;
+			width: 100%;
 		}
 	}
 </style>

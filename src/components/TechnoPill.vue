@@ -16,6 +16,7 @@
 		width: fit-content;
 		padding: 2px 20px;
 
+		text-wrap: nowrap;
 		user-select: none;
 		background: none;
 		cursor: pointer;
