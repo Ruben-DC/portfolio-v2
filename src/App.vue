@@ -113,6 +113,10 @@
 		</section>
 
 		<section id="projects">
+			<div class="blob-container">
+				<div class="second blob"></div>
+			</div>
+
 			<h2><a href="#projects">Mes projets</a></h2>
 
 			<div class="carousel">
@@ -192,6 +196,10 @@
 
 			<p>Designé avec Figma</p>
 		</div>
+
+		<div class="blob-container">
+			<div class="third blob"></div>
+		</div>
 	</footer>
 </template>
 
@@ -240,8 +248,16 @@
 	#home {
 		position: relative;
 		flex-direction: row;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+
 		justify-content: space-between;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+
 		align-items: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
 
 		.presentation {
 			z-index: 500;
@@ -322,35 +338,57 @@
 	}
 
 	#skills {
-		height: fit-content;
-
-		margin-bottom: 170px;
-
+		margin-bottom: 150px;
 		.skills-categories-wrapper {
 			display: flex;
 			flex-direction: row;
 			align-items: flex-start;
 			flex-wrap: wrap;
 			gap: 35px;
+
+			@media screen and (max-width: v.$breakpoint-tablet) {
+				justify-content: center;
+			}
 		}
 	}
 
 	#projects {
+		position: relative;
 		height: fit-content;
 		.carousel {
 			display: flex;
 			flex-direction: row;
-			flex-wrap: wrap;
-			gap: 35px;
+			column-gap: 30px;
+			row-gap: 15px;
 
-			@media screen and (max-width: v.$breakpoint-mobile) {
-				flex-direction: column;
+			height: 100%;
+			width: 100%;
+
+			@media screen and (max-width: v.$breakpoint-tablet) {
 				justify-content: center;
 				align-items: center;
+				flex-wrap: wrap;
+			}
+		}
 
-				height: 100%;
-				width: 100%;
-				overflow-x: hidden;
+		.blob-container {
+			top: 0;
+			left: 0;
+
+			.second {
+				top: 0;
+				left: 0;
+
+				width: 250px;
+				height: 250px;
+				border-radius: 100%;
+
+				opacity: 0.5;
+				filter: blur(150px);
+			}
+
+			@media screen and (max-width: v.$breakpoint-mobile) {
+				display: none;
 			}
 		}
 	}
@@ -406,13 +444,38 @@
 				color: v.$accent-color;
 			}
 		}
+
+		.blob-container {
+			bottom: 0;
+			right: 50%;
+			transform: translateX(50%);
+
+			.third {
+				bottom: -200px;
+
+				width: 300px;
+				height: 300px;
+				border-radius: 100%;
+
+				opacity: 0.5;
+				filter: blur(200px);
+			}
+		}
 	}
 
 	@media screen and (max-width: v.$breakpoint-tablet) {
 		#home {
 			flex-direction: column;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+
 			justify-content: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+
 			align-items: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
 
 			.decoration {
 				height: 50%;
@@ -438,7 +501,6 @@
 			.skills-categories-wrapper {
 				width: 100%;
 				flex-direction: column;
-				// justify-content: center;
 				align-items: center;
 			}
 		}

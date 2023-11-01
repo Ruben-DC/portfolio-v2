@@ -76,6 +76,7 @@ section {
 }
 
 .blob-container {
+	z-index: -1;
 	position: absolute;
 
 	display: flex;

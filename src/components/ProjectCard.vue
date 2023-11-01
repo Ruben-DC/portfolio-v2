@@ -67,11 +67,11 @@
 			align-items: flex-start;
 			gap: 18px;
 
-			width: 100%;
+			// width: 100%;
 			max-width: 450px;
+			min-width: 200px;
 			height: fit-content;
 			padding: 30px;
-			margin-bottom: 15px;
 
 			background: none;
 			backdrop-filter: blur(0.8px);
