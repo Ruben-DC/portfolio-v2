@@ -383,7 +383,7 @@
 				height: 250px;
 				border-radius: 100%;
 
-				opacity: 0.5;
+				opacity: 0.25;
 				filter: blur(150px);
 			}
 
