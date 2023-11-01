@@ -340,11 +340,8 @@
 		.carousel {
 			display: flex;
 			flex-direction: row;
+			flex-wrap: wrap;
 			gap: 35px;
-			padding: 5px 0;
-
-			overflow-x: scroll;
-			overflow-y: hidden;
 
 			@media screen and (max-width: v.$breakpoint-mobile) {
 				flex-direction: column;

@@ -52,6 +52,7 @@
 			align-items: flex-start;
 
 			height: fit-content;
+			width: 200px;
 			padding: 25px;
 
 			background: none;

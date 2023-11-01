@@ -6,10 +6,10 @@
 
 	onMounted(() => {
 		VanillaTilt.init(projectCard.value, {
-			max: 5,
+			max: 2,
 			speed: 400,
 			glare: true,
-			"max-glare": 0.1,
+			"max-glare": 0.07,
 			scale: 1.02,
 		});
 	});
@@ -65,11 +65,12 @@
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-start;
-			gap: 15px;
+			gap: 18px;
 
 			width: 100%;
+			max-width: 450px;
 			height: fit-content;
-			padding: 25px;
+			padding: 30px;
 			margin-bottom: 15px;
 
 			background: none;
